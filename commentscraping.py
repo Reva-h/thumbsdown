@@ -25,8 +25,8 @@ def get_youtube_comments(request_content):
     """
     soup = bs(request_content, "html.parser")
     comment_list = soup.findAll('tr', attrs = {'class' : 'commtext c00'})
-    newlist = comment_list.split("commtext c00\">")
-    print(newlist)
+    #newlist = comment_list.split("commtext c00\">")
+    print(comment_list[1])
 
 
 def main():
