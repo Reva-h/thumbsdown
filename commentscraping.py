@@ -31,10 +31,11 @@ def get_youtube_comments():
 def main():
     get_site('https://www.youtube.com/watch?v=t0X0gLEsAfI&ab_channel=HashtagUnited')
 
+    get_youtube_comments()
 
 
 if __name__ == "__main__":
     main()
 
 
-get_youtube_comments()
+
