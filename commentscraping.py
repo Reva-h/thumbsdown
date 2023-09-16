@@ -28,9 +28,9 @@ def get_youtube_comments(request_content):
     # comment_list = soup.findAll(class_="commtext c00", text=lambda s: "year" not in s)
     comment_list = soup.find_all(class_='commtext c00')
     #newlist = comment_list.split("commtext c00\">")
-    print(str(comment_list[0].text)[0:-10] + '\n--------------------------------------\n' +
-            str(comment_list[1].text)[0:-10] + '\n--------------------------------------\n' +
-            str(comment_list[2].text)[0:-10] + '\n--------------------------------------\n' +
+    print(str(comment_list[0].text)[0:-40] + '\n--------------------------------------\n' +
+            str(comment_list[1].text)[0:-1] + '\n--------------------------------------\n' +
+            str(comment_list[2].text)[0:-30] + '\n--------------------------------------\n' +
             comment_list[3].text + '\n--------------------------------------\n'
         )
 
