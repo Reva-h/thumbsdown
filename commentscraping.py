@@ -26,4 +26,4 @@ Use Soup with the requests object to parse through youtube comments section
 Return list of dict of youtube comments: {username: [comments]}
 """
 
-get_youtube_comment()
+get_youtube_comments()
