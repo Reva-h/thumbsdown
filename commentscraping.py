@@ -23,10 +23,9 @@ def get_youtube_comments(request_content):
     Use Soup with the requests object to parse through youtube comments section
     Return list of dict of youtube comments: {username: [comments]}
     """
-
     soup = bs(request_content, "html.parser")
-    results = soup.find(id = 'content-text')
-    print(results, soup)
+    comment_list = soup.findAll('tr', attrs = {'class' : 'commtext c00'})
+    print(comment_list)
 
 
 def main():
