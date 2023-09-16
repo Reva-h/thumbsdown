@@ -7,12 +7,15 @@ def get_site(site_url = ""):
     Returns content object of site to be injested into BS
     """
     try:
-        page = requests.get(url)
+        page = requests.get(site_url)
+        print(page.status_code)
+        return page.content
+
     except Exception as e:
         #Requests failed
         print(e)
+    
 
-    return page.content
 
 def get_youtube_comments():
     """
