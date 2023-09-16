@@ -21,8 +21,8 @@ def get_youtube_comments():
     """
 
     soup = bs(get_site('https://www.youtube.com/watch?v=t0X0gLEsAfI&ab_channel=HashtagUnited'), "html.parser")
-    results = soup.find(id = 'content-text')
-    print(results)
+    results = soup.find_all(id="content-text")
+    print(results.prettify())
 
 
 def main():
