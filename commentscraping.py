@@ -7,7 +7,7 @@ def get_site(site_url = ""):
     Returns content object of site to be injested into BS
     """
     try:
-        page = requests.get(url)
+        page = requests.get(site_url)
     except Exception as e:
         #Requests failed
         print(e)
