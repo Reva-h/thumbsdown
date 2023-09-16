@@ -8,8 +8,8 @@ def get_site(site_url = ""):
     """
     try:
         page = requests.get(site_url)
-        print(page.status_code)
-        print(page.content)
+        #print(page.status_code)
+        #print(page.content)
         return page.content
 
     except Exception as e:
