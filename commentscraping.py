@@ -8,11 +8,14 @@ def get_site(site_url = ""):
     """
     try:
         page = requests.get(site_url)
+        print(page.status_code)
+        return page.content
+
     except Exception as e:
         #Requests failed
         print(e)
+    
 
-    return page.content
 
 def get_youtube_comments():
     """
