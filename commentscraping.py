@@ -1,17 +1,20 @@
 import requests
 from bs4 import BeautifulSoup as bs
 
-url = "https://www.youtube.com/watch?v=t0X0gLEsAfI&ab_channel=HashtagUnited"
-page = requests.get(url)
-
 soup = bs(page.content, "html.parser")
 
+def get_site(site_url = ""):
+    """
+    Get the json content of given site using requests library
+    Returns content object of site to be injested into BS
+    """
+    try:
+        page = requests.get(url)
+    except Exception as e:
+        print(page.status_code)
+        print(e)
 
-def get_site()
-"""
-Get the json content of given site using requests library
-Returns request object of site
-"""
+    return page.content
 
 def get_youtube_comments()
 """
