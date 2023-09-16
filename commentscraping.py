@@ -26,13 +26,12 @@ def get_youtube_comments(request_content):
 
     soup = bs(request_content, "html.parser")
     results = soup.find(id = 'content-text')
-    print(results)
+    print(results, soup)
 
 
 def main():
-    result = get_site('https://www.youtube.com/watch?v=t0X0gLEsAfI&ab_channel=HashtagUnited')
+    result = get_site('https://news.ycombinator.com/item?id=37534615')
     get_youtube_comments(result)
-
 
 if __name__ == "__main__":
     main()
